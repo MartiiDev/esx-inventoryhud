@@ -1,13 +1,8 @@
+FR. Fork de esx_inventoryhud avec ajout du double clic pour utiliser un item.
+Plus possible de sélectionner du texte par erreur avec la souris.
 
-# Dutch Players Edit // esx-inventoryhud // UPDATING TO ESX 1.2
-Esx_inventoryhud 2.3 was taken offline a while ago and would not be updated anymore. ESX has now also been updated (version 1.2), but now esx_inventoryhud 2.3 has become unusable.
-
-We, Dutch Players, are still very much in favor of updating FiveM Artifacts and ESX. Both DISC inventoryhud and other UI oriented inventory systems have become unusable. Nevertheless, we would like a working UI for the inventory.
-
-We are going to try to update esx_inventoryhud without bugs.
-Your help is much appreciated in a pull request!
-
-We did not make any of these scripts. We do not take any credits.
+EN. Fork of esx_invetoryhud adding double click to use the items.
+You can't select text anymore with mouse while in inventory.
 
 ## Requirements
 - [es_extended](https://github.com/ESX-Org/es_extended)
