@@ -62,7 +62,27 @@ window.addEventListener("message", function (event) {
                     $("#give").removeClass("disabled");
                 }
             }
+        }).dblclick(function(){
+            itemData = $(this).data("item");
+
+            if (itemData == undefined || itemData.usable == undefined) {
+                return;
+            }
+
+            itemInventory = $(this).data("inventory");
+
+            if (itemInventory == undefined || itemInventory == "second") {
+                return;
+            }
+
+            if (itemData.usable) {
+                disableInventory(300);
+                $.post("http://esx_inventoryhud/UseItem", JSON.stringify({
+                    item: itemData
+                }));
+            }
         });
+
     } else if (event.data.action == "setSecondInventoryItems") {
         secondInventorySetup(event.data.itemList);
     } else if (event.data.action == "setInfoText") {
@@ -199,6 +219,27 @@ $(document).ready(function () {
             closeInventory();
         }
     });
+
+    // $('.slot').dblclick(function(){
+    //     itemData = ui.draggable.data("item");
+
+    //     if (itemData == undefined || itemData.usable == undefined) {
+    //         return;
+    //     }
+
+    //     itemInventory = ui.draggable.data("inventory");
+
+    //     if (itemInventory == undefined || itemInventory == "second") {
+    //         return;
+    //     }
+
+    //     if (itemData.usable) {
+    //         disableInventory(300);
+    //         $.post("http://esx_inventoryhud/UseItem", JSON.stringify({
+    //             item: itemData
+    //         }));
+    //     }
+    // });
 
     $('#use').droppable({
         hoverClass: 'hoverControl',
